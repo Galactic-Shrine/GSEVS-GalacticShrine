@@ -1,6 +1,6 @@
-﻿/**
- * Copyright © 2023-2025, Galactic-Shrine - All Rights Reserved.
- * Copyright © 2023-2025, Galactic-Shrine - Tous droits réservés.
+/**
+ * Copyright © 2017-2026, Galactic-Shrine - All Rights Reserved.
+ * Copyright © 2017-2026, Galactic-Shrine - Tous droits réservés.
  * 
  * Mozilla Public License 2.0 / Licence Publique Mozilla 2.0
  *
@@ -12,6 +12,7 @@
  * Si une copie de la MPL ne vous a pas été distribuée avec ce fichier, vous pouvez en obtenir une à l'adresse suivante : https://mozilla.org/MPL/2.0/.
  * Les modifications apportées à ce fichier doivent être partagées sous la même Licence Publique Mozilla, v. 2.0.
  **/
+
 using System;
 using System.Collections.Generic;
 using GalacticShrine.Stockage;
@@ -36,15 +37,13 @@ namespace GalacticShrine {
      *   [EN] The catalog is case-insensitive on group names.
      * </remarks>
      **/
-		public static readonly Catalogue Extension = new Catalogue(
-			new Dictionary<string, Groupe>(StringComparer.OrdinalIgnoreCase)
-			{
+		public static readonly Catalogue Extension = new(
+			new Dictionary<string, Groupe>(StringComparer.OrdinalIgnoreCase) {
 
         /**
          * [FR] Ce catalogue peut être étendu si nécessaire (ajout de groupes ou d’extensions spécifiques projet).<br/>
          * [EN] This catalog can be extended if needed (add project-specific groups or extensions).
          **/
-
         ["Images"] = new Groupe(
 					"Images",
 					".png", ".jpg", ".jpeg", ".bmp", ".gif", ".tiff", ".tif", ".dds", ".tga", ".webp"
@@ -96,7 +95,7 @@ namespace GalacticShrine {
          **/
         ["Gs"] = new Groupe(
 					"Gs",
-					".gsc", ".gscc", ".gsp"
+					".GsC", ".GsCc", ".GsP"
 				)
 			}
 		);

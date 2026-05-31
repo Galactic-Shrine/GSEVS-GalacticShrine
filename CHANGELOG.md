@@ -5,6 +5,12 @@
 
 ---
 
+## [1.2.1.117] - 2026-05-31
+
+### Modifié
+- Harmonisation des extensions de configuration vers la casse officielle : `.GsC` et `.GsCc`.
+- Mise à jour du README.md
+
 ## [1.2.0.115] - 2025-11-20
 
 ### Modifié
