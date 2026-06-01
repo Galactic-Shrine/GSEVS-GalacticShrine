@@ -1,6 +1,6 @@
-﻿/**
- * Copyright © 2023-2025, Galactic-Shrine - All Rights Reserved.
- * Copyright © 2023-2025, Galactic-Shrine - Tous droits réservés.
+/**
+ * Copyright © 2017-2026, Galactic-Shrine - All Rights Reserved.
+ * Copyright © 2017-2026, Galactic-Shrine - Tous droits réservés.
  * 
  * Mozilla Public License 2.0 / Licence Publique Mozilla 2.0
  *
@@ -12,7 +12,9 @@
  * Si une copie de la MPL ne vous a pas été distribuée avec ce fichier, vous pouvez en obtenir une à l'adresse suivante : https://mozilla.org/MPL/2.0/.
  * Les modifications apportées à ce fichier doivent être partagées sous la même Licence Publique Mozilla, v. 2.0.
  **/
+
 using System;
+using System.IO;
 using GalacticShrine.Enumeration;
 
 namespace GalacticShrine.Terminal {
@@ -24,6 +26,43 @@ namespace GalacticShrine.Terminal {
    * </summary>
    **/
 	public static class Sortie {
+
+		const int LargeurFenetreParDefaut = 80;
+
+		internal static int ObtenirLargeurFenetreSecurisee() {
+
+			try {
+
+				int Largeur = Console.WindowWidth;
+				return Largeur > 0 ? Largeur : LargeurFenetreParDefaut;
+			}
+			catch(IOException) {
+
+				return LargeurFenetreParDefaut;
+			}
+			catch(PlatformNotSupportedException) {
+
+				return LargeurFenetreParDefaut;
+			}
+		}
+
+		static int ObtenirLargeurUtile() => Math.Max(1, ObtenirLargeurFenetreSecurisee() - 1);
+
+		static int ObtenirPositionCurseurSecurisee() {
+
+			try {
+
+				return Math.Max(0, Console.CursorLeft);
+			}
+			catch(IOException) {
+
+				return 0;
+			}
+			catch(PlatformNotSupportedException) {
+
+				return 0;
+			}
+		}
 
 		/**
      * <summary>
@@ -79,16 +118,17 @@ namespace GalacticShrine.Terminal {
 
 				case true:
 
-				int Dimension = Console.WindowWidth - 1;
+				int Dimension = ObtenirLargeurUtile();
+					int PositionCurseur = ObtenirPositionCurseurSecurisee();
 
-				if(Dimension != Console.CursorLeft + 1) {
+					if(Dimension != PositionCurseur + 1) {
 
-					Dimension = Dimension - Console.CursorLeft;
-				}
+						Dimension = Dimension - PositionCurseur;
+					}
 
 				if(Dimension < Texte.Length) {
 
-					Dimension = Console.WindowWidth + Dimension;
+					Dimension = ObtenirLargeurFenetreSecurisee() + Dimension;
 				}
 
 				if(Dimension < 0) {
@@ -132,16 +172,17 @@ namespace GalacticShrine.Terminal {
 
 				case true:
 
-				int Dimension = Console.WindowWidth - 1;
+				int Dimension = ObtenirLargeurUtile();
+					int PositionCurseur = ObtenirPositionCurseurSecurisee();
 
-				if(Dimension != Console.CursorLeft + 1) {
+					if(Dimension != PositionCurseur + 1) {
 
-					Dimension = Dimension - Console.CursorLeft;
-				}
+						Dimension = Dimension - PositionCurseur;
+					}
 
 				if(Dimension < Texte.Length) {
 
-					Dimension = Console.WindowWidth + Dimension;
+					Dimension = ObtenirLargeurFenetreSecurisee() + Dimension;
 				}
 
 				if(Dimension < 0) {
@@ -170,7 +211,7 @@ namespace GalacticShrine.Terminal {
      * </param>
      **/
 		public static void Aligner(string Texte) =>
-			Ecrire(true, $"{Texte.PadRight(Console.WindowWidth - 1)}");
+			Ecrire(true, $"{Texte.PadRight(ObtenirLargeurUtile())}");
 
 		/**
      * <summary>
@@ -187,7 +228,7 @@ namespace GalacticShrine.Terminal {
      * </param>
      **/
 		public static void Aligner(string Texte, object Argument) =>
-			Ecrire(true, $"{Texte.PadRight(Console.WindowWidth - 1)}", Argument);
+			Ecrire(true, $"{Texte.PadRight(ObtenirLargeurUtile())}", Argument);
 
 		/**
      * <summary>
@@ -210,20 +251,20 @@ namespace GalacticShrine.Terminal {
 				case Alignement.Droite:
 
 				// Aligne le texte à droite (espaces à gauche).
-				Ecrire(true, $"{Texte.PadLeft(Console.WindowWidth - 1)}");
+				Ecrire(true, $"{Texte.PadLeft(ObtenirLargeurUtile())}");
 				break;
 
 				case Alignement.Gauche:
 
 				// Aligne le texte à gauche (espaces à droite).
-				Ecrire(true, $"{Texte.PadRight(Console.WindowWidth - 1)}");
+				Ecrire(true, $"{Texte.PadRight(ObtenirLargeurUtile())}");
 				break;
 
 				case Alignement.Centre:
 
-				decimal Taille = Console.WindowWidth - 1 - Texte.Length;
-				int TailleDroite = (int)Math.Round(Taille / 2);
-				int TailleGauche = (int)(Taille - TailleDroite);
+				decimal Taille = ObtenirLargeurUtile() - Texte.Length;
+				int TailleDroite = Math.Max(0, (int)Math.Round(Taille / 2));
+				int TailleGauche = Math.Max(0, (int)(Taille - TailleDroite));
 				string MargeGauche = new string(' ', TailleGauche);
 				string MargeDroite = new string(' ', TailleDroite);
 
@@ -234,7 +275,7 @@ namespace GalacticShrine.Terminal {
 
 				default:
 
-				Ecrire(true, $"{Texte.PadRight(Console.WindowWidth - 1)}");
+				Ecrire(true, $"{Texte.PadRight(ObtenirLargeurUtile())}");
 				break;
 			}
 		}
@@ -264,20 +305,20 @@ namespace GalacticShrine.Terminal {
 				case Alignement.Droite:
 
 				// Aligne le texte à droite (espaces à gauche).
-				Ecrire(true, $"{Texte.PadLeft(Console.WindowWidth - 1)}", Argument);
+				Ecrire(true, $"{Texte.PadLeft(ObtenirLargeurUtile())}", Argument);
 				break;
 
 				case Alignement.Gauche:
 
 				// Aligne le texte à gauche (espaces à droite).
-				Ecrire(true, $"{Texte.PadRight(Console.WindowWidth - 1)}", Argument);
+				Ecrire(true, $"{Texte.PadRight(ObtenirLargeurUtile())}", Argument);
 				break;
 
 				case Alignement.Centre:
 
-				decimal Taille = Console.WindowWidth - 1 - Texte.Length;
-				int TailleDroite = (int)Math.Round(Taille / 2);
-				int TailleGauche = (int)(Taille - TailleDroite);
+				decimal Taille = ObtenirLargeurUtile() - Texte.Length;
+				int TailleDroite = Math.Max(0, (int)Math.Round(Taille / 2));
+				int TailleGauche = Math.Max(0, (int)(Taille - TailleDroite));
 				string MargeGauche = new string(' ', TailleGauche);
 				string MargeDroite = new string(' ', TailleDroite);
 
@@ -288,7 +329,7 @@ namespace GalacticShrine.Terminal {
 
 				default:
 
-				Ecrire(true, $"{Texte.PadRight(Console.WindowWidth - 1)}", Argument);
+				Ecrire(true, $"{Texte.PadRight(ObtenirLargeurUtile())}", Argument);
 				break;
 			}
 		}
@@ -305,7 +346,7 @@ namespace GalacticShrine.Terminal {
      **/
 		public static void LigneSeparatriceDecoree(char Caractere) {
 
-			string Texte = new string(Caractere, Console.WindowWidth - 1);
+			string Texte = new string(Caractere, ObtenirLargeurUtile());
 			Ecrire(true, Texte);
 		}
 
@@ -345,7 +386,7 @@ namespace GalacticShrine.Terminal {
      **/
 		public static void Extreme(string Gauche, string Droit) {
 
-			decimal Taille = Console.WindowWidth - 1;
+			decimal Taille = ObtenirLargeurUtile();
 			int MargeDroite = (int)Math.Round(Taille / 2);
 			int MargeGauche = (int)(Taille - MargeDroite);
 

@@ -183,18 +183,6 @@
   <data name="FichierTrouve" xml:space="preserve">
     <value>फाइल फेला पर्यो: {0}.!</value>
   </data>
-  <data name="FichierTrouve4" xml:space="preserve">
-    <value>फाइल फेला पर्यो: {0}.!</value>
-  </data>
-  <data name="FichierTrouve3" xml:space="preserve">
-    <value>फाइल फेला पर्यो: {0}.!</value>
-  </data>
-  <data name="FichierTrouve2" xml:space="preserve">
-    <value>फाइल फेला पर्यो: {0}.!</value>
-  </data>
-  <data name="FichierTrouve1" xml:space="preserve">
-    <value>फाइल फेला पर्यो: {0}.!</value>
-  </data>
   <data name="LeCheminNePeutPasEtreVide" xml:space="preserve">
     <value>बाटो खाली हुन सक्दैन ।!</value>
   </data>
@@ -212,5 +200,71 @@
   </data>
   <data name="LeParametreNePeutPasEtreVide" xml:space="preserve">
     <value>प्यारामिटर '{0}' खाली हुन सक्दैन ।!</value>
+  </data>
+  <data name="ServeurEnLigne" xml:space="preserve">
+    <value>सर्भर अनलाइन छ ।!</value>
+  </data>
+  <data name="ServeurHorsLigne" xml:space="preserve">
+    <value>सर्भर अफलाइन छ ।!</value>
+  </data>
+  <data name="ErreurConnexionServeur" xml:space="preserve">
+    <value>सर्भरमा जडान गर्दा त्रुटि: {0}!</value>
+  </data>
+  <data name="MessageExceptionAccesNonAutoriseALaRessourceDemandee" xml:space="preserve">
+    <value>अनुरोध गरिएको स्रोतमा अनधिकृत पहुँच ।!</value>
+  </data>
+  <data name="MessageExceptionArgumentFourniEstInvalide" xml:space="preserve">
+    <value>प्रदान गरिएको तर्क अमान्य छ ।!</value>
+  </data>
+  <data name="MessageExceptionArgumentEstHorsDesLimitesAutorisees" xml:space="preserve">
+    <value>तर्क सीमा बाहिर छ ।!</value>
+  </data>
+  <data name="LArgument" xml:space="preserve">
+    <value>तर्क!</value>
+  </data>
+  <data name="MessageExceptionLArgumentAvecVars" xml:space="preserve">
+    <value>तर्क '{ 0 }'!</value>
+  </data>
+  <data name="MessageExceptionParamsPossedeUneValeurHorsLimitesValeurActuelleLimitesAutoriseesAvecVars" xml:space="preserve">
+    <value>{0} को आउट - अफ - बाउन्ड मान छ । हालको मान: '{ 1 }' । अनुमति दिइएको सीमा: [{2}; {3}] ।!</value>
+  </data>
+  <data name="MessageExceptionParamsPossedeUneValeurHorsDesLimitesAutoriseesValeurActuelleAvecVars" xml:space="preserve">
+    <value>{0} को अनुमति दिइएको सीमा भन्दा बाहिरको मान छ । हालको मान: '{ 1 }'.!</value>
+  </data>
+  <data name="MessageExceptionParamsPossedeUneValeurNonPriseEnChargeValeurActuelleAvecVars" xml:space="preserve">
+    <value>{0} को एक असमर्थित मान छ । हालको मान: '{ 1 }'.!</value>
+  </data>
+  <data name="MessageExceptionParamsPossedeUneValeurNonPriseEnChargeValeurActuelleValeursAutoriseesAvecVars" xml:space="preserve">
+    <value>{0} को एक असमर्थित मान छ । हालको मान: '{ 1 }' । अनुमति प्राप्त मानहरू: {2} ।!</value>
+  </data>
+  <data name="MessageExceptionLeCheminSpecifieEstTropLong" xml:space="preserve">
+    <value>निर्दिष्ट मार्ग धेरै लामो छ ।!</value>
+  </data>
+  <data name="MessageExceptionUneErreurDeCryptageSEstProduite" xml:space="preserve">
+    <value>एउटा ईन्क्रिप्शन त्रुटि भएको छ ।!</value>
+  </data>
+  <data name="MessageExceptionUneErreurGalacticShrineSEstProduite" xml:space="preserve">
+    <value>ग्यालेक्टिक - श्राइन त्रुटि भएको छ ।!</value>
+  </data>
+  <data name="MessageExceptionLeFichierEstIntrouvable" xml:space="preserve">
+    <value>फाइल फेला पार्न सकिएन ।!</value>
+  </data>
+  <data name="MessageExceptionLeFormatFourniEstInvalide" xml:space="preserve">
+    <value>प्रदान गरिएको ढाँचा अमान्य छ ।!</value>
+  </data>
+  <data name="MessageExceptionCetteFonctionnaliteNEstPasSupportee" xml:space="preserve">
+    <value>यो सुविधा समर्थित छैन ।!</value>
+  </data>
+  <data name="MessageExceptionLOperationDemandeeNEstPasValide" xml:space="preserve">
+    <value>अनुरोध गरिएको अपरेशन अमान्य छ ।!</value>
+  </data>
+  <data name="MessageExceptionLaValidationAEchoue" xml:space="preserve">
+    <value>प्रमाणीकरण असफल भयो ।!</value>
+  </data>
+  <data name="MessageExceptionLeFormatDuGsIdEstInvalide" xml:space="preserve">
+    <value>GsId ढाँचा अमान्य छ ।!</value>
+  </data>
+  <data name="LeNomDeLaVariableDEnvironnementNePeutPasEtreVide" xml:space="preserve">
+    <value>वातावरण चल नाम खाली हुन सक्दैन ।!</value>
   </data>
 </root>

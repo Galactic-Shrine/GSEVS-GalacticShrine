@@ -183,18 +183,6 @@
   <data name="FichierTrouve" xml:space="preserve">
     <value>Файлът е намерен: {0}.!</value>
   </data>
-  <data name="FichierTrouve4" xml:space="preserve">
-    <value>Файлът е намерен: {0}.!</value>
-  </data>
-  <data name="FichierTrouve3" xml:space="preserve">
-    <value>Файлът е намерен: {0}.!</value>
-  </data>
-  <data name="FichierTrouve2" xml:space="preserve">
-    <value>Файлът е намерен: {0}.!</value>
-  </data>
-  <data name="FichierTrouve1" xml:space="preserve">
-    <value>Файлът е намерен: {0}.!</value>
-  </data>
   <data name="LeCheminNePeutPasEtreVide" xml:space="preserve">
     <value>Пътят не може да е празен.!</value>
   </data>
@@ -212,5 +200,71 @@
   </data>
   <data name="LeParametreNePeutPasEtreVide" xml:space="preserve">
     <value>Параметърът „{0}“ не може да бъде празен.!</value>
+  </data>
+  <data name="ServeurEnLigne" xml:space="preserve">
+    <value>Сървърът е онлайн!</value>
+  </data>
+  <data name="ServeurHorsLigne" xml:space="preserve">
+    <value>Сървърът е офлайн.!</value>
+  </data>
+  <data name="ErreurConnexionServeur" xml:space="preserve">
+    <value>Грешка при свързване със сървъра: {0}!</value>
+  </data>
+  <data name="MessageExceptionAccesNonAutoriseALaRessourceDemandee" xml:space="preserve">
+    <value>Неоторизиран достъп до заявения ресурс.!</value>
+  </data>
+  <data name="MessageExceptionArgumentFourniEstInvalide" xml:space="preserve">
+    <value>Предоставеният аргумент е невалиден.!</value>
+  </data>
+  <data name="MessageExceptionArgumentEstHorsDesLimitesAutorisees" xml:space="preserve">
+    <value>Аргументът е извън границите!</value>
+  </data>
+  <data name="LArgument" xml:space="preserve">
+    <value>Аргументът!</value>
+  </data>
+  <data name="MessageExceptionLArgumentAvecVars" xml:space="preserve">
+    <value>Аргумент „{ 0 }“!</value>
+  </data>
+  <data name="MessageExceptionParamsPossedeUneValeurHorsLimitesValeurActuelleLimitesAutoriseesAvecVars" xml:space="preserve">
+    <value>{0} има стойност извън границите. Текуща стойност: „{ 1 }“. Допустими граници: [{2}; {3}].!</value>
+  </data>
+  <data name="MessageExceptionParamsPossedeUneValeurHorsDesLimitesAutoriseesValeurActuelleAvecVars" xml:space="preserve">
+    <value>{0} има стойност извън допустимите граници. Текуща стойност: „{ 1 }“.!</value>
+  </data>
+  <data name="MessageExceptionParamsPossedeUneValeurNonPriseEnChargeValeurActuelleAvecVars" xml:space="preserve">
+    <value>{0} има неподдържана стойност. Текуща стойност: „{ 1 }“.!</value>
+  </data>
+  <data name="MessageExceptionParamsPossedeUneValeurNonPriseEnChargeValeurActuelleValeursAutoriseesAvecVars" xml:space="preserve">
+    <value>{0} има неподдържана стойност. Текуща стойност: „{ 1 }“. Позволени стойности: {2}.!</value>
+  </data>
+  <data name="MessageExceptionLeCheminSpecifieEstTropLong" xml:space="preserve">
+    <value>Посоченият път е твърде дълъг.!</value>
+  </data>
+  <data name="MessageExceptionUneErreurDeCryptageSEstProduite" xml:space="preserve">
+    <value>Възникна грешка при шифроването.!</value>
+  </data>
+  <data name="MessageExceptionUneErreurGalacticShrineSEstProduite" xml:space="preserve">
+    <value>Възникна грешка в Галактическото светилище.!</value>
+  </data>
+  <data name="MessageExceptionLeFichierEstIntrouvable" xml:space="preserve">
+    <value>Файлът не може да бъде намерен.!</value>
+  </data>
+  <data name="MessageExceptionLeFormatFourniEstInvalide" xml:space="preserve">
+    <value>Предоставеният формат е невалиден.!</value>
+  </data>
+  <data name="MessageExceptionCetteFonctionnaliteNEstPasSupportee" xml:space="preserve">
+    <value>Тази функция не се поддържа.!</value>
+  </data>
+  <data name="MessageExceptionLOperationDemandeeNEstPasValide" xml:space="preserve">
+    <value>Заявената операция е невалидна.!</value>
+  </data>
+  <data name="MessageExceptionLaValidationAEchoue" xml:space="preserve">
+    <value>Неуспешно валидиране.!</value>
+  </data>
+  <data name="MessageExceptionLeFormatDuGsIdEstInvalide" xml:space="preserve">
+    <value>GsId форматът е невалиден.!</value>
+  </data>
+  <data name="LeNomDeLaVariableDEnvironnementNePeutPasEtreVide" xml:space="preserve">
+    <value>Името на променливата на средата не може да бъде празно.!</value>
   </data>
 </root>

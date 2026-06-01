@@ -1,6 +1,6 @@
-﻿/**
- * Copyright © 2023-2025, Galactic-Shrine - All Rights Reserved.
- * Copyright © 2023-2025, Galactic-Shrine - Tous droits réservés.
+/**
+ * Copyright © 2017-2026, Galactic-Shrine - All Rights Reserved.
+ * Copyright © 2017-2026, Galactic-Shrine - Tous droits réservés.
  * 
  * Mozilla Public License 2.0 / Licence Publique Mozilla 2.0
  *
@@ -12,6 +12,7 @@
  * Si une copie de la MPL ne vous a pas été distribuée avec ce fichier, vous pouvez en obtenir une à l'adresse suivante : https://mozilla.org/MPL/2.0/.
  * Les modifications apportées à ce fichier doivent être partagées sous la même Licence Publique Mozilla, v. 2.0.
  **/
+
 using System;
 using System.Collections.Generic;
 using System.Reflection;
@@ -56,6 +57,7 @@ namespace GalacticShrine {
      *        <list type="bullet">
      *          <item><description><c>"ProgramFiles"</c> : <see cref="string"/> chemin vers Program Files si disponible.</description></item>
      *          <item><description><c>"Documents"</c>    : <see cref="string"/> dossier Documents de l'utilisateur.</description></item>
+	 *          <item><description><c>"Games"</c>      : <see cref="DossierReference"/> dossier des jeux</description></item>
      *          <item><description><c>"Roaming"</c>      : <see cref="string"/> AppData Roaming.</description></item>
      *          <item><description><c>"Societe"</c>      : <see cref="DossierReference"/> parent du répertoire de l’assemblage.</description></item>
      *          <item><description><c>"Racine"</c>       : <see cref="DossierReference"/> répertoire de l’assemblage.</description></item>
@@ -69,6 +71,7 @@ namespace GalacticShrine {
      *        <list type="bullet">
      *          <item><description><c>"ProgramFiles"</c>: <see cref="string"/> path to Program Files when available.</description></item>
      *          <item><description><c>"Documents"</c>   : <see cref="string"/> user Documents folder.</description></item>
+	 *          <item><description><c>"Games"</c>       : <see cref="DossierReference"/> games folder.</description></item>
      *          <item><description><c>"Roaming"</c>     : <see cref="string"/> AppData Roaming.</description></item>
      *          <item><description><c>"Societe"</c>     : <see cref="DossierReference"/> parent of the assembly directory.</description></item>
      *          <item><description><c>"Racine"</c>      : <see cref="DossierReference"/> assembly directory.</description></item>
@@ -171,7 +174,16 @@ namespace GalacticShrine {
 			string CheminDocuments = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
 			if(!string.IsNullOrWhiteSpace(CheminDocuments)) {
 
+				// Dossier "My Games" dans Documents
+				var DossierJeux = new DossierReference(
+					Chemins: Chemin.Combiner(
+						CheminDocuments,
+						"My Games"
+					)
+				);
+
 				Table["Documents"] = CheminDocuments;
+				Table["Games"] = DossierJeux;
 			}
 
 			string CheminRoaming = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);

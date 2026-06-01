@@ -183,18 +183,6 @@
   <data name="FichierTrouve" xml:space="preserve">
     <value>Archivo encontrado: {0}.!</value>
   </data>
-  <data name="FichierTrouve4" xml:space="preserve">
-    <value>Archivo encontrado: {0}.!</value>
-  </data>
-  <data name="FichierTrouve3" xml:space="preserve">
-    <value>Archivo encontrado: {0}.!</value>
-  </data>
-  <data name="FichierTrouve2" xml:space="preserve">
-    <value>Archivo encontrado: {0}.!</value>
-  </data>
-  <data name="FichierTrouve1" xml:space="preserve">
-    <value>Archivo encontrado: {0}.!</value>
-  </data>
   <data name="LeCheminNePeutPasEtreVide" xml:space="preserve">
     <value>El camino no puede estar vacío.!</value>
   </data>
@@ -212,5 +200,71 @@
   </data>
   <data name="LeParametreNePeutPasEtreVide" xml:space="preserve">
     <value>¡El parámetro `{0}` no puede estar vacío!</value>
+  </data>
+  <data name="ServeurEnLigne" xml:space="preserve">
+    <value>El servidor está en línea.!</value>
+  </data>
+  <data name="ServeurHorsLigne" xml:space="preserve">
+    <value>El servidor está fuera de línea.!</value>
+  </data>
+  <data name="ErreurConnexionServeur" xml:space="preserve">
+    <value>Ha fallado la conexión al servidor Certigna</value>
+  </data>
+  <data name="MessageExceptionAccesNonAutoriseALaRessourceDemandee" xml:space="preserve">
+    <value>Acceso no autorizado al recurso solicitado.!</value>
+  </data>
+  <data name="MessageExceptionArgumentFourniEstInvalide" xml:space="preserve">
+    <value>¡El argumento proporcionado no es válido!</value>
+  </data>
+  <data name="MessageExceptionArgumentEstHorsDesLimitesAutorisees" xml:space="preserve">
+    <value>El argumento está fuera de los límites permitidos.!</value>
+  </data>
+  <data name="LArgument" xml:space="preserve">
+    <value>¡El argumento!</value>
+  </data>
+  <data name="MessageExceptionLArgumentAvecVars" xml:space="preserve">
+    <value>¡El argumento '{0}'!</value>
+  </data>
+  <data name="MessageExceptionParamsPossedeUneValeurHorsLimitesValeurActuelleLimitesAutoriseesAvecVars" xml:space="preserve">
+    <value>{0} tiene un valor fuera de límites. Valor actual: '{1}'. Límites permitidos: [{2}; {3}].!</value>
+  </data>
+  <data name="MessageExceptionParamsPossedeUneValeurHorsDesLimitesAutoriseesValeurActuelleAvecVars" xml:space="preserve">
+    <value>{0} tiene un valor fuera de los límites permitidos. Valor actual: '{1}'.!</value>
+  </data>
+  <data name="MessageExceptionParamsPossedeUneValeurNonPriseEnChargeValeurActuelleAvecVars" xml:space="preserve">
+    <value>{0} tiene un valor no admitido. Valor actual: '{1}'.!</value>
+  </data>
+  <data name="MessageExceptionParamsPossedeUneValeurNonPriseEnChargeValeurActuelleValeursAutoriseesAvecVars" xml:space="preserve">
+    <value>{0} tiene un valor no admitido. Valor actual: '{1}'. Valores permitidos: {2}.!</value>
+  </data>
+  <data name="MessageExceptionLeCheminSpecifieEstTropLong" xml:space="preserve">
+    <value>¡El camino especificado es demasiado largo!</value>
+  </data>
+  <data name="MessageExceptionUneErreurDeCryptageSEstProduite" xml:space="preserve">
+    <value>¡Se ha producido un error!</value>
+  </data>
+  <data name="MessageExceptionUneErreurGalacticShrineSEstProduite" xml:space="preserve">
+    <value>Se ha producido un error Galactic-Shrine.!</value>
+  </data>
+  <data name="MessageExceptionLeFichierEstIntrouvable" xml:space="preserve">
+    <value>El archivo *** no se encuentra o está vacío</value>
+  </data>
+  <data name="MessageExceptionLeFormatFourniEstInvalide" xml:space="preserve">
+    <value>El formato proporcionado no es válido.!</value>
+  </data>
+  <data name="MessageExceptionCetteFonctionnaliteNEstPasSupportee" xml:space="preserve">
+    <value>Esta funcionalidad no es compatible.!</value>
+  </data>
+  <data name="MessageExceptionLOperationDemandeeNEstPasValide" xml:space="preserve">
+    <value>¡La operación solicitada no es válida!</value>
+  </data>
+  <data name="MessageExceptionLaValidationAEchoue" xml:space="preserve">
+    <value>La validación ha fallado.!</value>
+  </data>
+  <data name="MessageExceptionLeFormatDuGsIdEstInvalide" xml:space="preserve">
+    <value>¡El formato del GsId no es válido!</value>
+  </data>
+  <data name="LeNomDeLaVariableDEnvironnementNePeutPasEtreVide" xml:space="preserve">
+    <value>El nombre de la variable de entorno no puede estar vacío.!</value>
   </data>
 </root>

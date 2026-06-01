@@ -183,18 +183,6 @@
   <data name="FichierTrouve" xml:space="preserve">
     <value>Datei gefunden: {0}.!</value>
   </data>
-  <data name="FichierTrouve4" xml:space="preserve">
-    <value>Datei gefunden: {0}.!</value>
-  </data>
-  <data name="FichierTrouve3" xml:space="preserve">
-    <value>Datei gefunden: {0}.!</value>
-  </data>
-  <data name="FichierTrouve2" xml:space="preserve">
-    <value>Datei gefunden: {0}.!</value>
-  </data>
-  <data name="FichierTrouve1" xml:space="preserve">
-    <value>Datei gefunden: {0}.!</value>
-  </data>
   <data name="LeCheminNePeutPasEtreVide" xml:space="preserve">
     <value>Der Weg darf nicht leer sein.!</value>
   </data>
@@ -212,5 +200,71 @@
   </data>
   <data name="LeParametreNePeutPasEtreVide" xml:space="preserve">
     <value>Parameter `{0}` darf nicht leer sein.!</value>
+  </data>
+  <data name="ServeurEnLigne" xml:space="preserve">
+    <value>Der Server ist online.!</value>
+  </data>
+  <data name="ServeurHorsLigne" xml:space="preserve">
+    <value>Der Server ist offline.!</value>
+  </data>
+  <data name="ErreurConnexionServeur" xml:space="preserve">
+    <value>Verbindungsfehler zum Server: {0}!</value>
+  </data>
+  <data name="MessageExceptionAccesNonAutoriseALaRessourceDemandee" xml:space="preserve">
+    <value>Unbefugter Zugriff auf die angeforderte Ressource.!</value>
+  </data>
+  <data name="MessageExceptionArgumentFourniEstInvalide" xml:space="preserve">
+    <value>Das angegebene Argument ist ungültig.!</value>
+  </data>
+  <data name="MessageExceptionArgumentEstHorsDesLimitesAutorisees" xml:space="preserve">
+    <value>Das Argument liegt außerhalb der zulässigen Grenzen.!</value>
+  </data>
+  <data name="LArgument" xml:space="preserve">
+    <value>Das Argument!</value>
+  </data>
+  <data name="MessageExceptionLArgumentAvecVars" xml:space="preserve">
+    <value>Das Argument '{0}'!</value>
+  </data>
+  <data name="MessageExceptionParamsPossedeUneValeurHorsLimitesValeurActuelleLimitesAutoriseesAvecVars" xml:space="preserve">
+    <value>{0} hat einen Grenzwert. Aktueller Wert: '{1}'. Zulässige Grenzen: [{2}; {3}].!</value>
+  </data>
+  <data name="MessageExceptionParamsPossedeUneValeurHorsDesLimitesAutoriseesValeurActuelleAvecVars" xml:space="preserve">
+    <value>{0} hat einen Wert außerhalb der zulässigen Grenzen. Aktueller Wert: '{1}'.!</value>
+  </data>
+  <data name="MessageExceptionParamsPossedeUneValeurNonPriseEnChargeValeurActuelleAvecVars" xml:space="preserve">
+    <value>{0} hat einen nicht unterstützten Wert. Aktueller Wert: '{1}'.!</value>
+  </data>
+  <data name="MessageExceptionParamsPossedeUneValeurNonPriseEnChargeValeurActuelleValeursAutoriseesAvecVars" xml:space="preserve">
+    <value>{0} hat einen nicht unterstützten Wert. Aktueller Wert: '{1}'. Zulässige Werte: {2}.!</value>
+  </data>
+  <data name="MessageExceptionLeCheminSpecifieEstTropLong" xml:space="preserve">
+    <value>Der angegebene Weg ist zu lang.!</value>
+  </data>
+  <data name="MessageExceptionUneErreurDeCryptageSEstProduite" xml:space="preserve">
+    <value>Ein Verschlüsselungsfehler ist aufgetreten.!</value>
+  </data>
+  <data name="MessageExceptionUneErreurGalacticShrineSEstProduite" xml:space="preserve">
+    <value>Ein Galactic-Shrine Fehler ist aufgetreten.!</value>
+  </data>
+  <data name="MessageExceptionLeFichierEstIntrouvable" xml:space="preserve">
+    <value>Die QRP-Datei konnte nicht gefunden werden</value>
+  </data>
+  <data name="MessageExceptionLeFormatFourniEstInvalide" xml:space="preserve">
+    <value>Format ist ungültig.</value>
+  </data>
+  <data name="MessageExceptionCetteFonctionnaliteNEstPasSupportee" xml:space="preserve">
+    <value>Diese Funktion wird nicht unterstützt.!</value>
+  </data>
+  <data name="MessageExceptionLOperationDemandeeNEstPasValide" xml:space="preserve">
+    <value>Arbeitsgang ist ungültig.</value>
+  </data>
+  <data name="MessageExceptionLaValidationAEchoue" xml:space="preserve">
+    <value>Die Validierung ist fehlgeschlagen</value>
+  </data>
+  <data name="MessageExceptionLeFormatDuGsIdEstInvalide" xml:space="preserve">
+    <value>Tipp hat ein ungültiges Format</value>
+  </data>
+  <data name="LeNomDeLaVariableDEnvironnementNePeutPasEtreVide" xml:space="preserve">
+    <value>Der Name der Umgebungsvariable darf nicht leer sein.!</value>
   </data>
 </root>

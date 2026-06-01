@@ -183,18 +183,6 @@
   <data name="FichierTrouve" xml:space="preserve">
     <value>พบไฟล์: {0}.!</value>
   </data>
-  <data name="FichierTrouve4" xml:space="preserve">
-    <value>พบไฟล์: {0}.!</value>
-  </data>
-  <data name="FichierTrouve3" xml:space="preserve">
-    <value>พบไฟล์: {0}.!</value>
-  </data>
-  <data name="FichierTrouve2" xml:space="preserve">
-    <value>พบไฟล์: {0}.!</value>
-  </data>
-  <data name="FichierTrouve1" xml:space="preserve">
-    <value>พบไฟล์: {0}.!</value>
-  </data>
   <data name="LeCheminNePeutPasEtreVide" xml:space="preserve">
     <value>เส้นทางต้องไม่ว่างเปล่า!</value>
   </data>
@@ -212,5 +200,71 @@
   </data>
   <data name="LeParametreNePeutPasEtreVide" xml:space="preserve">
     <value>ต้องกรอกพารามิเตอร์ '{0}'!</value>
+  </data>
+  <data name="ServeurEnLigne" xml:space="preserve">
+    <value>เซิร์ฟเวอร์ออนไลน์แล้ว!</value>
+  </data>
+  <data name="ServeurHorsLigne" xml:space="preserve">
+    <value>เซิร์ฟเวอร์ออฟไลน์แล้ว!</value>
+  </data>
+  <data name="ErreurConnexionServeur" xml:space="preserve">
+    <value>เกิดข้อผิดพลาดในการเชื่อมต่อกับเซิร์ฟเวอร์: {0}!</value>
+  </data>
+  <data name="MessageExceptionAccesNonAutoriseALaRessourceDemandee" xml:space="preserve">
+    <value>การเข้าถึงทรัพยากรที่ร้องขอโดยไม่ได้รับอนุญาต!</value>
+  </data>
+  <data name="MessageExceptionArgumentFourniEstInvalide" xml:space="preserve">
+    <value>อาร์กิวเมนต์ที่ระบุไม่ถูกต้อง!</value>
+  </data>
+  <data name="MessageExceptionArgumentEstHorsDesLimitesAutorisees" xml:space="preserve">
+    <value>การโต้เถียงอยู่นอกขอบเขต!</value>
+  </data>
+  <data name="LArgument" xml:space="preserve">
+    <value>ข้อโต้แย้ง!</value>
+  </data>
+  <data name="MessageExceptionLArgumentAvecVars" xml:space="preserve">
+    <value>อาร์กิวเมนต์ '{ 0 }'!</value>
+  </data>
+  <data name="MessageExceptionParamsPossedeUneValeurHorsLimitesValeurActuelleLimitesAutoriseesAvecVars" xml:space="preserve">
+    <value>{0} มีค่านอกขอบเขตค่าปัจจุบัน: '{ 1 }' ขีดจำกัดที่อนุญาต: [{2}; {3}].!</value>
+  </data>
+  <data name="MessageExceptionParamsPossedeUneValeurHorsDesLimitesAutoriseesValeurActuelleAvecVars" xml:space="preserve">
+    <value>{0} มีค่าเกินขีดจำกัดที่อนุญาตค่าปัจจุบัน: '{ 1 }'.!</value>
+  </data>
+  <data name="MessageExceptionParamsPossedeUneValeurNonPriseEnChargeValeurActuelleAvecVars" xml:space="preserve">
+    <value>{0} มีค่าที่ไม่รองรับค่าปัจจุบัน: '{ 1 }'.!</value>
+  </data>
+  <data name="MessageExceptionParamsPossedeUneValeurNonPriseEnChargeValeurActuelleValeursAutoriseesAvecVars" xml:space="preserve">
+    <value>{0} มีค่าที่ไม่รองรับค่าปัจจุบัน: '{ 1 }' ค่าที่อนุญาต: {2}.!</value>
+  </data>
+  <data name="MessageExceptionLeCheminSpecifieEstTropLong" xml:space="preserve">
+    <value>เส้นทางที่ระบุยาวเกินไป!</value>
+  </data>
+  <data name="MessageExceptionUneErreurDeCryptageSEstProduite" xml:space="preserve">
+    <value>เกิดข้อผิดพลาดในการเข้ารหัส!</value>
+  </data>
+  <data name="MessageExceptionUneErreurGalacticShrineSEstProduite" xml:space="preserve">
+    <value>เกิดข้อผิดพลาดของ Galactic-Shrine!</value>
+  </data>
+  <data name="MessageExceptionLeFichierEstIntrouvable" xml:space="preserve">
+    <value>ไม่พบไฟล์!</value>
+  </data>
+  <data name="MessageExceptionLeFormatFourniEstInvalide" xml:space="preserve">
+    <value>รูปแบบที่ให้มาไม่ถูกต้อง!</value>
+  </data>
+  <data name="MessageExceptionCetteFonctionnaliteNEstPasSupportee" xml:space="preserve">
+    <value>ไม่รองรับฟีเจอร์นี้!</value>
+  </data>
+  <data name="MessageExceptionLOperationDemandeeNEstPasValide" xml:space="preserve">
+    <value>การดำเนินการที่ร้องขอไม่ถูกต้อง!</value>
+  </data>
+  <data name="MessageExceptionLaValidationAEchoue" xml:space="preserve">
+    <value>การตรวจสอบความถูกต้องล้มเหลว!</value>
+  </data>
+  <data name="MessageExceptionLeFormatDuGsIdEstInvalide" xml:space="preserve">
+    <value>รูปแบบ GsId ไม่ถูกต้อง!</value>
+  </data>
+  <data name="LeNomDeLaVariableDEnvironnementNePeutPasEtreVide" xml:space="preserve">
+    <value>ชื่อตัวแปรสภาพแวดล้อมต้องไม่ว่างเปล่า!</value>
   </data>
 </root>

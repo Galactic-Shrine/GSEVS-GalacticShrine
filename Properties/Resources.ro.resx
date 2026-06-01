@@ -183,18 +183,6 @@
   <data name="FichierTrouve" xml:space="preserve">
     <value>Fișier găsit: {0}.!</value>
   </data>
-  <data name="FichierTrouve4" xml:space="preserve">
-    <value>Fișier găsit: {0}.!</value>
-  </data>
-  <data name="FichierTrouve3" xml:space="preserve">
-    <value>Fișier găsit: {0}.!</value>
-  </data>
-  <data name="FichierTrouve2" xml:space="preserve">
-    <value>Fișier găsit: {0}.!</value>
-  </data>
-  <data name="FichierTrouve1" xml:space="preserve">
-    <value>Fișier găsit: {0}.!</value>
-  </data>
   <data name="LeCheminNePeutPasEtreVide" xml:space="preserve">
     <value>Calea nu poate fi goală.!</value>
   </data>
@@ -212,5 +200,71 @@
   </data>
   <data name="LeParametreNePeutPasEtreVide" xml:space="preserve">
     <value>Parametrul `{0}` nu poate rămâne necompletat.!</value>
+  </data>
+  <data name="ServeurEnLigne" xml:space="preserve">
+    <value>Serverul este online.!</value>
+  </data>
+  <data name="ServeurHorsLigne" xml:space="preserve">
+    <value>Serverul este offline.!</value>
+  </data>
+  <data name="ErreurConnexionServeur" xml:space="preserve">
+    <value>Eroare la conectarea la server: {0}!</value>
+  </data>
+  <data name="MessageExceptionAccesNonAutoriseALaRessourceDemandee" xml:space="preserve">
+    <value>Acces neautorizat la resursa solicitată.!</value>
+  </data>
+  <data name="MessageExceptionArgumentFourniEstInvalide" xml:space="preserve">
+    <value>Argumentul furnizat nu este valid.!</value>
+  </data>
+  <data name="MessageExceptionArgumentEstHorsDesLimitesAutorisees" xml:space="preserve">
+    <value>Argumentul este în afara limitelor.!</value>
+  </data>
+  <data name="LArgument" xml:space="preserve">
+    <value>Argumentul!</value>
+  </data>
+  <data name="MessageExceptionLArgumentAvecVars" xml:space="preserve">
+    <value>Argumentul '{0}'!</value>
+  </data>
+  <data name="MessageExceptionParamsPossedeUneValeurHorsLimitesValeurActuelleLimitesAutoriseesAvecVars" xml:space="preserve">
+    <value>{0} are o valoare în afara limitelor. Valoare curentă: '{1}'. Limite permise: [{2}; {3}].!</value>
+  </data>
+  <data name="MessageExceptionParamsPossedeUneValeurHorsDesLimitesAutoriseesValeurActuelleAvecVars" xml:space="preserve">
+    <value>{0} are o valoare în afara limitelor permise. Valoare curentă: '{1}'.!</value>
+  </data>
+  <data name="MessageExceptionParamsPossedeUneValeurNonPriseEnChargeValeurActuelleAvecVars" xml:space="preserve">
+    <value>{0} are o valoare neacceptată. Valoare curentă: '{1}'.!</value>
+  </data>
+  <data name="MessageExceptionParamsPossedeUneValeurNonPriseEnChargeValeurActuelleValeursAutoriseesAvecVars" xml:space="preserve">
+    <value>{0} are o valoare neacceptată. Valoare curentă: '{1}'. Valori permise: {2}.!</value>
+  </data>
+  <data name="MessageExceptionLeCheminSpecifieEstTropLong" xml:space="preserve">
+    <value>Calea specificată este prea lungă.!</value>
+  </data>
+  <data name="MessageExceptionUneErreurDeCryptageSEstProduite" xml:space="preserve">
+    <value>A apărut o eroare de criptare.!</value>
+  </data>
+  <data name="MessageExceptionUneErreurGalacticShrineSEstProduite" xml:space="preserve">
+    <value>A apărut o eroare Galactic-Shrine.!</value>
+  </data>
+  <data name="MessageExceptionLeFichierEstIntrouvable" xml:space="preserve">
+    <value>Fișierul nu a putut fi găsit.!</value>
+  </data>
+  <data name="MessageExceptionLeFormatFourniEstInvalide" xml:space="preserve">
+    <value>Formatul furnizat nu este valid.!</value>
+  </data>
+  <data name="MessageExceptionCetteFonctionnaliteNEstPasSupportee" xml:space="preserve">
+    <value>Această caracteristică nu este acceptată.!</value>
+  </data>
+  <data name="MessageExceptionLOperationDemandeeNEstPasValide" xml:space="preserve">
+    <value>Operația solicitată nu este validă.!</value>
+  </data>
+  <data name="MessageExceptionLaValidationAEchoue" xml:space="preserve">
+    <value>Validarea a eșuat.!</value>
+  </data>
+  <data name="MessageExceptionLeFormatDuGsIdEstInvalide" xml:space="preserve">
+    <value>Formatul GsId nu este valid.!</value>
+  </data>
+  <data name="LeNomDeLaVariableDEnvironnementNePeutPasEtreVide" xml:space="preserve">
+    <value>Numele variabilei de mediu nu poate rămâne necompletat.!</value>
   </data>
 </root>

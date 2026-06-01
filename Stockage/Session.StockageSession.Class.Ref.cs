@@ -1,6 +1,6 @@
-﻿/**
- * Copyright © 2023-2025, Galactic-Shrine - All Rights Reserved.
- * Copyright © 2023-2025, Galactic-Shrine - Tous droits réservés.
+/**
+ * Copyright © 2017-2026, Galactic-Shrine - All Rights Reserved.
+ * Copyright © 2017-2026, Galactic-Shrine - Tous droits réservés.
  * 
  * Mozilla Public License 2.0 / Licence Publique Mozilla 2.0
  *
@@ -12,6 +12,7 @@
  * Si une copie de la MPL ne vous a pas été distribuée avec ce fichier, vous pouvez en obtenir une à l'adresse suivante : https://mozilla.org/MPL/2.0/.
  * Les modifications apportées à ce fichier doivent être partagées sous la même Licence Publique Mozilla, v. 2.0.
  **/
+
 using System;
 using System.IO;
 using System.Security.Cryptography;
@@ -37,6 +38,8 @@ namespace GalacticShrine.Stockage {
    * </remarks>
    **/
 	public class Session : StockageSessionInterface {
+
+    private const string MarqueurDeSession = "GSSESSION:1\n";
 
     /**
      * <summary>
@@ -161,7 +164,7 @@ namespace GalacticShrine.Stockage {
 				bufferSize: 1024,
 				leaveOpen: false);
 
-			redacteur.Write(Donnees);
+			redacteur.Write(AjouterMarqueurDeSession(Donnees: Donnees));
 		}
 
 		/**
@@ -232,7 +235,7 @@ namespace GalacticShrine.Stockage {
 				leaveOpen: false);
 
 			await redacteur
-				.WriteAsync(Donnees.AsMemory(), JetonAnnulation)
+				.WriteAsync(AjouterMarqueurDeSession(Donnees: Donnees).AsMemory(), JetonAnnulation)
 				.ConfigureAwait(false);
 
 			await redacteur
@@ -292,7 +295,7 @@ namespace GalacticShrine.Stockage {
 				detectEncodingFromByteOrderMarks: true,
 				leaveOpen: false);
 
-			return lecteur.ReadToEnd();
+			return ExtraireDonneesDeSession(Donnees: lecteur.ReadToEnd());
 		}
 
 		/**
@@ -361,7 +364,19 @@ namespace GalacticShrine.Stockage {
 				.ReadToEndAsync()
 				.ConfigureAwait(false);
 
-			return resultat;
+				return ExtraireDonneesDeSession(Donnees: resultat);
+			}
+
+    private static string AjouterMarqueurDeSession(string Donnees) => string.Concat(str0: MarqueurDeSession, str1: Donnees);
+
+    private static string ExtraireDonneesDeSession(string Donnees) {
+
+      if(Donnees.StartsWith(value: MarqueurDeSession, comparisonType: StringComparison.Ordinal)) {
+
+        return Donnees[MarqueurDeSession.Length..];
+      }
+
+      throw new CryptographicException(message: "Le fichier de session est invalide ou la clé de chiffrement est incorrecte.");
+    }
 		}
 	}
-}

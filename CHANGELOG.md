@@ -5,6 +5,42 @@
 
 ---
 
+## [1.3.0.125] - 2026-06-01
+
+### Corrigé
+- `Fichier.Reference.Class.Ref.cs`
+  - Correction de `ObtenirLeNomDeFichierSansAucuneExtension()` afin de travailler sur le nom du fichier plutôt que sur le chemin complet.
+  - Réduction des risques d'erreur lorsque le chemin contient des dossiers avec des points dans leur nom.
+
+- `Fichier.Systeme.Reference.Class.Ref.cs`
+  - Correction de `ContientTousLesNoms(...)`.
+  - La méthode vérifie désormais que tous les noms demandés sont présents avec une logique `All`, au lieu de valider à tort dès qu'un seul nom était présent avec une logique `Any`.
+
+### Ajouté
+- `GalacticShrine.class.Ref.cs`
+  - Ajout du dossier standard `Games`.
+  - Ce dossier est destiné à référencer un emplacement standard pour les jeux, notamment autour de `Documents/My Games`.
+
+- `Stockage/Session.StockageSession.Class.Ref.cs`
+  - Ajout du marqueur de session `GSSESSION:1`.
+  - Le marqueur permet de mieux vérifier qu'un fichier déchiffré correspond bien à un fichier de session Galactic-Shrine valide.
+
+### Modifié
+- `Outils/WindowsTheme.Assistant.Class.Ref.cs`
+  - Extension de la détection du thème système vers une logique multiplateforme.
+  - Prise en charge améliorée de Windows, Linux et macOS.
+  - Windows utilise la logique basée sur le registre.
+  - Linux peut utiliser les informations disponibles via XDG Portal, GSettings, GTK ou KDE.
+  - macOS peut utiliser la détection via les préférences système.
+
+- `Terminal.Sortie.Class.Ref.cs`
+  - Sécurisation des calculs liés à la largeur de console.
+  - Ajout d'une logique plus robuste pour éviter les largeurs invalides ou négatives dans les contextes console particuliers, scripts ou environnements CI.
+
+- `Properties/Resources*.resx`
+  - Ajout et mise à jour de messages localisés.
+  - Préparation des ressources nécessaires aux nouvelles erreurs, validations et messages internes.
+
 ## [1.2.1.117] - 2026-05-31
 
 ### Modifié
