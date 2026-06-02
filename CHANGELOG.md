@@ -5,6 +5,40 @@
 
 ---
 
+## [1.4.0.130] - 2026-06-01
+
+### Ajouté
+
+- Ajout des exceptions communes Galactic-Shrine.
+  - `GsException`
+  - `GsArgumentException`
+  - `GsArgumentHorsLimitesException`
+  - `GsAccesNonAutoriseException`
+  - `GsCheminTropLongException`
+  - `GsCryptageException`
+  - `GsFichierIntrouvableException`
+  - `GsFormatException`
+  - `GsNonSupportesException`
+  - `GsOperationNonValideException`
+  - `GsValidationException`
+
+- Ajout du système de variables d’environnement.
+  - Ajout de `EnvironnementCible`.
+  - Ajout de `InfoEnvironnement`.
+  - Ajout de l’API `GalacticShrine.Systeme.Environnement`.
+
+- Ajout de la structure générale `Couleur`.
+  - Gestion RGBA.
+  - Conversion hexadécimale.
+  - Gestion de la transparence.
+  - Composition de couleurs.
+  - Génération de séquences ANSI pour premier plan et arrière-plan.
+
+### Modifié
+
+- Modification des date des en-tête pour la véritable date de création du projet
+- Ajout et mise à jour des ressources localisées nécessaires aux nouvelles exceptions et aux messages du système d’environnement.
+
 ## [1.3.0.125] - 2026-06-01
 
 ### Corrigé

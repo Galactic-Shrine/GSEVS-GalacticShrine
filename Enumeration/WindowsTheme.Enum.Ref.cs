@@ -1,6 +1,6 @@
-﻿/**
- * Copyright © 2023-2025, Galactic-Shrine - All Rights Reserved.
- * Copyright © 2023-2025, Galactic-Shrine - Tous droits réservés.
+/**
+ * Copyright © 2017-2026, Galactic-Shrine - All Rights Reserved.
+ * Copyright © 2017-2026, Galactic-Shrine - Tous droits réservés.
  * 
  * Mozilla Public License 2.0 / Licence Publique Mozilla 2.0
  *

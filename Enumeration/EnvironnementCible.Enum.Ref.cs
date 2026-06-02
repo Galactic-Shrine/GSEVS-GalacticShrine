@@ -15,28 +15,36 @@
 
 namespace GalacticShrine.Enumeration {
 
-  /**
-   * <summary>
-   *   [FR] Enumération pour définir les types de compression utilisés dans le système.
-   *   [EN] Enumeration to define the compression types used in the system.
-   * </summary>
-   **/
-  public enum CompressionType {
+	/**
+	 * <summary>
+	 *   [FR] Représente la cible d'une variable d'environnement.
+	 *   [EN] Represents the target of an environment variable.
+	 * </summary>
+	 */
+	public enum EnvironnementCible {
 
-    /**
+		/**
      * <summary>
-     *   [FR] Compression standard à un seul thread.
-     *   [EN] Standard single-threaded compression.
+     *   [FR] Variable disponible uniquement pour le processus courant.
+     *   [EN] Variable available only for the current process.
      * </summary>
-     **/
-    Standard,
+     */
+		Processus = 0,
 
-    /**
+		/**
      * <summary>
-     *   [FR] Compression multi-thread pour des performances accrues avec de gros fichiers.
-     *   [EN] Multi-threaded compression for improved performance with large files.
+     *   [FR] Variable disponible pour l'utilisateur courant.
+     *   [EN] Variable available for the current user.
      * </summary>
-     **/
-    MultiThread
-  }
+     */
+		Utilisateur = 1,
+
+		/**
+     * <summary>
+     *   [FR] Variable disponible pour toute la machine.
+     *   [EN] Variable available for the whole machine.
+     * </summary>
+     */
+		Machine = 2
+	}
 }
