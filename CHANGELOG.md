@@ -5,6 +5,45 @@
 
 ---
 
+## [1.5.0.145] - 2026-06-03
+
+### Ajouté
+
+- Ajout du système `GsId`, identifiant Galactic-Shrine 256 bits.
+- Ajout de la structure `GSID`.
+- Ajout du générateur `GenerateurDIdentifiants`.
+- Ajout du parseur `Parseur`.
+- Ajout du validateur `Validateur`.
+- Ajout des options globales `Options` pour configurer le comportement par défaut de `GsId`.
+- Ajout des constantes `Constantes` liées au format `GsId`.
+
+### Formats
+
+- Ajout du format `N`, sans tirets.
+  - Longueur : 64 caractères hexadécimaux.
+- Ajout du format `D`, avec tirets.
+  - Motif : `16-8-8-8-8-16`.
+  - Longueur : 69 caractères.
+- Ajout de la gestion de la casse :
+  - `Majuscules`;
+  - `Minuscules`.
+
+### Sérialisation
+
+- Ajout du convertisseur JSON `ConvertisseurJson` pour `GSID`.
+- Ajout de la prise en charge du format JSON par défaut via `Options.FormatJsonParDefaut`.
+
+### Exceptions
+
+- Ajout de l'exception spécifique `GsIdFormatException`.
+- Ajout de la gestion des erreurs de format invalides lors de l'analyse d'un identifiant `GsId`.
+
+### Notes
+
+- Le système `GsId` est ajouté dans le dépôt principal `GSEVS-GalacticShrine`, car il s'agit d'une brique commune réutilisable par les autres bibliothèques Galactic-Shrine.
+- La configuration de `GsId` depuis un fichier `.GsC` ou `.GsCc` est gérée séparément dans `GSEVS-GalacticShrine-Configuration` via `OptionsDepuisGsC`.
+- Cette version n'ajoute pas de dépendance à `Microsoft.Extensions.Configuration.Abstractions`.
+
 ## [1.4.0.130] - 2026-06-01
 
 ### Ajouté
